@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3>3. Configurar DHCP</h3>
+      <ol>
+        <li>Abrir herramientas DHCP</li>
+        <li>Crear un nuevo ámbito</li>
+        <li>Definir nombre del ámbito</li>
+      </ol>
+
+      <h4>Ejemplo de rango IP</h4>
+      <table class="table table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th>Parámetro</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Red</td><td>192.168.1.0</td></tr>
+          <tr><td>Máscara</td><td>255.255.255.0</td></tr>
+          <tr><td>Inicio</td><td>192.168.1.100</td></tr>
+          <tr><td>Fin</td><td>192.168.1.200</td></tr>
+          <tr><td>Gateway</td><td>192.168.1.1</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3>4. Configurar opciones DHCP</h3>
+      <ul>
+        <li>Puerta de enlace predeterminada</li>
+        <li>Servidor DNS</li>
+        <li>Dominio</li>
+      </ul>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Opción</th>
+            <th>Ejemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Router</td><td>192.168.1.1</td></tr>
+          <tr><td>DNS</td><td>8.8.8.8</td></tr>
+          <tr><td>Dominio</td><td>empresa.local</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3>5. Activar el ámbito</h3>
+      <ol>
+        <li>Ir al panel DHCP</li>
+        <li>Seleccionar el ámbito creado</li>
+        <li>Hacer clic en "Activar"</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h3>6. Verificación</h3>
+      <ul>
+        <li>Conectar un cliente a la red</li>
+        <li>Ejecutar <code>ipconfig /renew</code></li>
+        <li>Comprobar IP asignada</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
