@@ -1,31 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Sistemas Operativos</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas Operativos | NextGen Wiki-IT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --it-blue: #0d6efd; --it-dark: #212529; }
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .hero-it { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80'); background-size: cover; color: white; padding: 80px 0; border-bottom: 5px solid var(--it-blue); }
+        .section-title { border-left: 5px solid var(--it-blue); padding-left: 15px; margin-bottom: 30px; color: var(--it-dark); }
+        .video-card { border: none; transition: transform 0.3s; background: #fff; border-radius: 15px; overflow: hidden; }
+        .video-card:hover { transform: translateY(-10px); }
+        .ratio-16x9 { border-radius: 15px 15px 0 0; }
+        .command-box { background: #282c34; color: #abb2bf; padding: 20px; border-radius: 8px; font-family: 'Consolas', monospace; position: relative; }
+        .command-box::before { content: "Terminal"; display: block; margin-bottom: 10px; font-size: 0.8rem; color: #5c6370; text-transform: uppercase; }
+    </style>
 </head>
 <body>
-<div class="container mt-5">
-  <h1>Sistemas Operativos</h1>
 
-  <h3>Instalación Linux</h3>
-  <ol>
-    <li>Arrancar desde USB</li>
-    <li>Seleccionar idioma</li>
-    <li>Configurar particiones</li>
-  </ol>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">📁 NEXTGEN <span class="text-primary">WIKI-IT</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#guias">Instalación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#comandos">Comandos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tutoriales">Videotutoriales</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <h3>Comandos Linux</h3>
-  <pre>ls
-cd
-sudo apt update</pre>
+    <header class="hero-it text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Gestión de Sistemas Operativos</h1>
+            <p class="lead">Documentación oficial para despliegue y administración de servidores empresariales.</p>
+        </div>
+    </header>
 
-  <h3>Comandos Windows</h3>
-  <pre>ipconfig
-ping
-dir</pre>
+    <main class="container my-5">
+        
+        <section id="comandos" class="mb-5">
+            <h2 class="section-title">Comandos Esenciales</h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="command-box shadow">
+                        <span class="text-success">$</span> sudo apt update && sudo apt upgrade<br>
+                        <span class="text-success">$</span> ls -lah /var/www/html<br>
+                        <span class="text-success">$</span> top (Monitorizar procesos)
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="command-box shadow">
+                        <span class="text-info">></span> Get-Service | Where-Object Status -eq "Running"<br>
+                        <span class="text-info">></span> ipconfig /all<br>
+                        <span class="text-info">></span> sfc /scannow (Reparar sistema)
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</div>
+        <section id="tutoriales">
+            <h2 class="section-title">Videotutoriales de Referencia</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card video-card shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/2IhkkONvgdA" title="Instalación Windows Server 2022" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Instalación de Windows Server 2022</h5>
+                            <p class="card-text text-muted small">Guía paso a paso desde la creación de la máquina virtual hasta la configuración inicial del servidor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card video-card shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <iframe src="https://www.youtube.com/embed/_KCc-tvpPRM" title="Comandos Linux" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">Comandos Linux Básicos (Ubuntu)</h5>
+                            <p class="card-text text-muted small">Domina la terminal: gestión de directorios, permisos de archivos y navegación en sistemas Linux Server.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">Wiki-IT | Proyecto Formativo 2026</p>
+            <small class="text-muted">Desarrollado bajo metodología Kanban</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

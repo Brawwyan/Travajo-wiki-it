@@ -1,25 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Seguridad</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad - NextGen Wiki-IT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --primary-color: #2c3e50; --accent-color: #e74c3c; }
+        body { background-color: #f4f7f6; }
+        .hero-section { background: var(--primary-color); color: white; padding: 60px 0; }
+        .protocol-card { border-top: 5px solid var(--accent-color); }
+    </style>
 </head>
 <body>
-<div class="container mt-5">
-  <h1>Seguridad</h1>
 
-  <h3>Política de contraseñas</h3>
-  <ul>
-    <li>Mínimo 8 caracteres</li>
-    <li>Uso de mayúsculas, números y símbolos</li>
-  </ul>
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1>Protocolos de Seguridad IT</h1>
+            <p class="lead">Normativas de contraseñas y configuración de Firewalls</p>
+        </div>
+    </header>
 
-  <h3>Firewall (Linux)</h3>
-  <pre>sudo ufw enable
-sudo ufw allow 22</pre>
+    <div class="container my-5">
+        <div class="row">
+            <!-- Protocolos de Contraseñas -->
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 protocol-card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title h4">1. Política de Contraseñas</h3>
+                        <p>Directrices obligatorias para todos los usuarios del sistema:</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Longitud:</strong> Mínimo 12 caracteres.</li>
+                            <li class="list-group-item"><strong>Complejidad:</strong> Uso de mayúsculas, minúsculas, números y símbolos.</li>
+                            <li class="list-group-item"><strong>Rotación:</strong> Cambio cada 90 días naturales.</li>
+                            <li class="list-group-item"><strong>MFA:</strong> Autenticación de doble factor obligatoria para acceso VPN.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Configuración de Firewalls -->
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100 protocol-card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title h4">2. Configuración de Firewalls</h3>
+                        <p>Reglas de filtrado perimetral establecidas:</p>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Acción</th>
+                                        <th>Puerto</th>
+                                        <th>Protocolo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ALLOW</td>
+                                        <td>443</td>
+                                        <td>HTTPS (Web Segura)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DENY</td>
+                                        <td>21</td>
+                                        <td>FTP (Inseguro)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DROP</td>
+                                        <td>3389</td>
+                                        <td>RDP (Escritorio Remoto)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Insertar este bloque debajo de la sección de reglas de Firewall -->
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h3 class="card-title h4 mb-3">Videotutorial: Conceptos de Firewall</h3>
+                <div class="ratio ratio-16x9">
+                    <!-- Video sobre funcionamiento de Firewalls -->
+                    <iframe src="https://www.youtube.com/embed/JY0ISTfg3lw" title="YouTube video" allowfullscreen></iframe>
+                </div>
+                <p class="mt-2 text-muted small">Fuente: Encriptados - ¿Cómo funciona un Firewall?</p>
+            </div>
+        </div>
+    </div>
 </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
